@@ -1,5 +1,14 @@
 Fantastic Commands and How to Use Them
 ======================================
+# Overview
+- Systems
+  - [Linux/GNU/Terminal](#linux)
+- Programs
+  - [Git](#git)
+- Languages
+  - [Racket](#racket)
+  - [Scribble](#scribble)
+  - [Markdown](#markdown)
 
 # Git
 ---
@@ -44,20 +53,24 @@ Pushes the committed changes to a [remote] repository. Must be the working direc
 Example:
 ```sh
 cd $HOME/projects/
-git push
+git push origin master
 ```
 ---
-#### git gud
+#### git remote
 ```sh
-git gud
+git remote -v
 ```
-Should bring up git documentation.
+Lists the remote repositories
 
-Example:
 ```sh
-git gud
+git remote add [-t <branch>] [-m <master>] [-f] [--[no-]tags] [--mirror=<fetch|push>] <name> <url>
 ```
+
+```sh
+git remote add origin https://github.com/HelixCarinae/ToolTips.git
 ---
+You have to do 'git init' before this.  
+
 #### git log
 ```sh
 git log
@@ -180,24 +193,24 @@ Essentially just racket that uses @ in front of calls
 
 # Linux
 
-## History 
+## History
 
 ### ctrl + r
 
 First there's the wonder ctrl+r
-```sh 
+```sh
 $ [ctrl+r] Fantast [enter]
 $ less $HOME/networkHome/uni/cs/2613/frog/post/_src/date-Fantastic_Commands.md
 ```
 
-### alt + . 
+### alt + .
 Pressing [**_alt+._**] inserts the parameter (you info) from the last command you used
 ```sh
 $ ls -a $HOME/Desktop/files
 $ nano [alt+.]/Fantastic_Commands
 ```
 
-### bang bang he shot me down ! 
+### bang bang he shot me down !
 We also have !$ which does the same as [alt + .]
 ```sh
 $ cat $HOME/networkHome/uni/cs/2613/frog/post/_src/date-Fantastic_Commands.md
@@ -208,13 +221,13 @@ there's more we can do with the bang however
 ```sh
 cd ~/Desktop/animals
 get http://www.cutepuppers.com/border_collie.jpg
-w!! #this runs 'wget http://www.cutepuppers.com/border_collie.jpg' immediately 
+w!! #this runs 'wget http://www.cutepuppers.com/border_collie.jpg' immediately
 cd ~/cats/all/the/cats
 wget http://www.cutepuppers.com/labrador.jpg
-mv ./labrador.jpg !-6&/dogs 
+mv ./labrador.jpg !-6&/dogs
 
 ```
-!! does the last command 
+!! does the last command
 !n where n is the order you used the commands (this can be found with history)
 !-y where y is the number you want to go back you have to add -1 to what you expect as running the command itself counts as history so !-1 just does !-1
 adding $ strips the command part from it (like ls -a)
@@ -223,5 +236,4 @@ adding $ strips the command part from it (like ls -a)
 ---
 
 
-## Heads or Tails? 
-
+## Heads or Tails?
